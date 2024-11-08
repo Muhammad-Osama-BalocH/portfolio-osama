@@ -4,14 +4,14 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub, FaEnvelope, FaPhoneAlt 
 
 const Contact = () => {
   return (
-    <div className="bg-slate-200 min-h-screen flex flex-col items-center py-12 px-6" id='contact'>
+    <div className="bg-slate-800 min-h-screen flex flex-col items-center py-12 px-6" id='contact'>
       <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 animate-fade-in-up">
         Contact Me
       </h2>
 
       {/* Contact Form and Contact Info */}
-      <div className="w-full max-w-4xl bg-amber-950 shadow-lg rounded-lg p-8 animate-fade-in-up delay-150">
-        <p className="text-center text-gray-200 mb-6">
+      <div className="w-full max-w-4xl  bg-slate-700c  shadow-lg rounded-lg p-8 animate-fade-in-up delay-150">
+        <p className="text-center text-black mb-6">
           I would love to connect! Reach out for collaborations, projects, or just a friendly chat.
         </p>
 

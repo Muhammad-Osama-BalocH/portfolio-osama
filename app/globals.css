@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fade-in and slide-up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Delays for a staggered effect */
+.animate-fade-in-up.delay-150 {
+  animation-delay: 0.15s;
+}
+.animate-fade-in-up.delay-300 {
+  animation-delay: 0.3s;
+}
+/* Fade-in and slide-up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Delays for a staggered effect */
+.animate-fade-in-up.delay-150 {
+  animation-delay: 0.15s;
+}

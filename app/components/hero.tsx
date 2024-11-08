@@ -1,10 +1,11 @@
-"use client"
-import React, { useState, useEffect } from 'react';
-import { FaGithub, FaFacebook, FaLinkedin } from 'react-icons/fa';
-import Link from 'next/link';
+"use client";
+import React, { useState, useEffect, useMemo } from "react";
+import { FaGithub, FaFacebook, FaLinkedin } from "react-icons/fa";
+import Link from "next/link";
+import Image from "next/image";
 
 const Hero = () => {
-  const titles = ["Frontend Developer", "UI/UX Designer", "Web Enthusiast"];
+  const titles = useMemo(() => ["Frontend Developer", "UI/UX Designer", "Web Enthusiast"], []);
   const [loopText, setLoopText] = useState("");
   const [titleIndex, setTitleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -38,9 +39,7 @@ const Hero = () => {
     <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gradient-to-r from-black to-slate-950 text-white px-6 py-12">
       {/* Left Side - About and Icons */}
       <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left space-y-6 animate-fade-in-up">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-          Hi, I’m Muhammad Osama
-        </h1>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">Hi, I&apos;m Muhammad Osama</h1>
         
         <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-blue-400">
           {loopText}
@@ -48,7 +47,7 @@ const Hero = () => {
         </h2>
 
         <p className="text-base sm:text-lg md:text-xl font-light leading-relaxed">
-          I'm a passionate developer with a strong foundation in web development and design, committed to crafting seamless user experiences and visually captivating interfaces. Let’s connect and explore opportunities to collaborate on innovative projects!
+          I&apos;m a passionate developer with a strong foundation in web development and design, committed to crafting seamless user experiences and visually captivating interfaces. Let&apos;s connect and explore opportunities to collaborate on innovative projects!
         </p>
 
         {/* Social Icons */}
@@ -67,9 +66,11 @@ const Hero = () => {
 
       {/* Right Side - Profile Image */}
       <div className="flex-1 flex justify-center mt-8 md:mt-0">
-        <img
+        <Image
           src="/osama.png" 
           alt="Profile"
+          width={200} // replace with actual width
+          height={200} // replace with actual height
           className="rounded-full w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 object-cover shadow-lg transform hover:scale-105 transition-transform duration-300"
         />
       </div>
